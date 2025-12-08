@@ -22,7 +22,9 @@ my_dict = {
 }
 
 print(my_other_dict)
-print(my_dict)
+print(my_dict.items())
+print(my_dict.keys())
+print(my_dict.values())
 
 print(len(my_other_dict))
 print(len(my_dict))

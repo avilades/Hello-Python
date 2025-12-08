@@ -30,17 +30,23 @@ finally:  # Opcional
     print("La ejecución continúa")
 
 # Excepciones por tipo
-
+print(F"\nExcepciones por tipo\n")
 try:
     print(numberOne + numberTwo)
     print("No se ha producido un error")
 except ValueError:
     print("Se ha producido un ValueError")
-except TypeError:
-    print("Se ha producido un TypeError")
+except TypeError as TypeError_error:
+    #print("Se ha producido un TypeError")
+    #print(TypeError_error)
+    print(f"Se ha producido un TypeError: {TypeError_error}")
+    print(f"Se ha producido un TypeError: {TypeError_error.__str__}")
+    print(f"Se ha producido un TypeError: {TypeError_error.args}")
+    print(f"Se ha producido un TypeError: {TypeError_error.with_traceback}")
+    print(f"Se ha producido un TypeError: {TypeError_error.with_traceback.__str__}")
 
 # Captura de la información de la excepción
-
+print(F"\nCaptura de la información de la excepción\n")
 try:
     print(numberOne + numberTwo)
     print("No se ha producido un error")
