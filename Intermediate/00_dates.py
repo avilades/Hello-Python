@@ -13,63 +13,79 @@ now = datetime.now()
 
 
 def print_date(date):
-    print(date.year)
-    print(date.month)
-    print(date.day)
-    print(date.hour)
-    print(date.minute)
-    print(date.second)
-    print(date.timestamp())
-
-
+    print(f"Date: {date}")
+    print(f"Year: {date.year}")
+    print(f"Month: {date.month}")
+    print(f"Day: {date.day}")
+    print(f"Hour: {date.hour}")
+    print(f"Minute: {date.minute}")
+    print(f"Second: {date.second}")
+    print(f"Timestamp: {date.timestamp()}")
+print("\nEmepzamos a trbajar con datetime\n")
 print_date(now)
 
-year_2023 = datetime(2023, 1, 1)
+year_2025 = datetime(2025, 12, 25)
 
-print_date(year_2023)
+print_date(year_2025)
+
+print("\nEmepzamos a trbajar con time\n")
 
 # Time
 
 
 current_time = time(21, 6, 0)
 
-print(current_time.hour)
-print(current_time.minute)
-print(current_time.second)
+print(f"Time: {current_time}")
+print(f"Hour: {current_time.hour}")
+print(f"Minute: {current_time.minute}")
+print(f"Second: {current_time.second}")
 
+
+
+print("\nEmepzamos a trbajar con date\n")
 # Date
-
 
 current_date = date.today()
 
-print(current_date.year)
-print(current_date.month)
-print(current_date.day)
+print(f"año de la current_date = date.today(): {current_date.year}")
+print(f"mes de la current_date = date.today(): {current_date.month}")
+print(f"dia de la current_date = date.today(): {current_date.day}")
 
-current_date = date(2022, 10, 6)
+current_date = date(2025, 8, 30)
 
-print(current_date.year)
-print(current_date.month)
-print(current_date.day)
+print(f"año de la current_date = date(2025, 8, 30): {current_date.year}")
+print(f"mes de la current_date = date(2025, 8, 30): {current_date.month}")
+print(f"dia de la current_date = date(2025, 8, 30): {current_date.day}")
 
 current_date = date(current_date.year,
                     current_date.month + 1, current_date.day)
 
-print(current_date.month)
+print(f"mes de la current_date = date(current_date.year, current_date.month + 1, current_date.day): {current_date.month}")
 
 # Operaciones con fechas
 
-diff = year_2023 - now
-print(diff)
+diff = year_2025 - now
+print(f"diff = year_2025 - now: {diff}")
 
-diff = year_2023.date() - current_date
-print(diff)
+diff = year_2025.date() - current_date
+print(f"diff = year_2025.date() - current_date: {diff}")
 
+print(f"current_date = date(current_date.year, current_date.month + 1, current_date.day): {current_date}")
+
+dia_beso = datetime(2025, 8, 31)
+
+print(f"dia_beso = datetime(2025, 8, 31): {dia_beso}")
+diff =  dia_beso - now
+print(f"diff = dia_beso - now: {diff}")
+
+print("\nEmepzamos a trbajar con timedelta\n")
 # Timedelta
 
 
 start_timedelta = timedelta(200, 100, 100, weeks=10)
 end_timedelta = timedelta(300, 100, 100, weeks=13)
 
-print(end_timedelta - start_timedelta)
-print(end_timedelta + start_timedelta)
+print(f"end_timedelta - start_timedelta: {end_timedelta - start_timedelta}")
+print(f"end_timedelta + start_timedelta: {end_timedelta + start_timedelta}")
+
+print("\nFIN\n")
