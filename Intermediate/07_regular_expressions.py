@@ -9,6 +9,7 @@ import re
 my_string = "Esta es la lección número 7: Lección llamada Expresiones Regulares"
 my_other_string = "Esta no es la lección número 6: Manejo de ficheros"
 
+# match: intenta encontrar el patron SOLO al principio de la cadena
 match = re.match("Esta es la lección", my_string, re.I)
 print(match)
 start, end = match.span()
@@ -26,6 +27,7 @@ print(re.match("Expresiones Regulares", my_string))
 
 # search
 
+# search: busca el patrón en toda la cadena (no solo al principio)
 search = re.search("lección", my_string, re.I)
 print(search)
 start, end = search.span()
@@ -33,15 +35,18 @@ print(my_string[start:end])
 
 # findall
 
+# findall: encuentra TODAS las ocurrencias del patrón y las devuelve en una lista
 findall = re.findall("lección", my_string, re.I)
 print(findall)
 
 # split
 
+# split: divide la cadena en cada ocurrencia del patrón
 print(re.split(":", my_string))
 
 # sub
 
+# sub: reemplaza las ocurrencias del patrón por otro texto
 print(re.sub("[l|L]ección", "LECCIÓN", my_string))
 print(re.sub("Expresiones Regulares", "RegEx", my_string))
 
@@ -49,6 +54,7 @@ print(re.sub("Expresiones Regulares", "RegEx", my_string))
 
 # Para aprender y validar expresiones regulares: https://regex101.com
 
+# Patrones personalizados
 pattern = r"[lL]ección"
 print(re.findall(pattern, my_string))
 
@@ -68,6 +74,7 @@ print(re.findall(pattern, my_string))
 pattern = r"[l].*"
 print(re.findall(pattern, my_string))
 
+# Validación de email
 email = "mouredev@mouredev.com"
 pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z-.]+$"
 print(re.match(pattern, email))
@@ -76,3 +83,4 @@ print(re.findall(pattern, email))
 
 email = "mouredev@mouredev.com.mx"
 print(re.findall(pattern, email))
+

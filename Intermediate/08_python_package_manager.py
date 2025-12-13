@@ -3,9 +3,11 @@
 ### Python Package Manager ###
 
 # PIP https://pypi.org
+# PIP es el gestor de paquetes de Python. Permite instalar librerías creadas por otros.
 
-# pip install pip
-# pip --version
+# Comandos útiles de terminal (ejectuados fuera de este script):
+# pip install pip (actualizar pip)
+# pip --version (ver versión)
 
 # pip install numpy
 import pandas
@@ -22,18 +24,20 @@ print(numpy_array * 2)
 
 # pip install pandas
 
-# pip list
-# pip uninstall pandas
-# pip show numpy
+# pip list (listar paquetes instalados)
+# pip uninstall pandas (desinstalar paquete)
+# pip show numpy (mostrar información de un paquete)
 
 # pip install requests
 
+# Requests es una librería muy popular para hacer peticiones HTTP (web)
 response = requests.get("https://pokeapi.co/api/v2/pokemon?limit=151")
 print(response)
 print(response.status_code)
 print(response.json())
 
 # Arithmetics Package
-
+# Ejemplo de uso de un paquete local creado por nosotros
 
 print(arithmetics.sum_two_values(1, 4))
+
