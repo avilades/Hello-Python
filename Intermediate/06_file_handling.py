@@ -8,7 +8,7 @@ import json
 import os
 
 # .txt file
-
+print("\nEmpezamos con los archivos\n")
 # 'open' abre el archivo.
 # "w+" es el modo: escritura (write) + lectura (read).
 # Si el archivo no existe lo crea, si existe lo sobrescribe.
