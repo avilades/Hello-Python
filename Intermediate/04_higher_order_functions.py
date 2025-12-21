@@ -21,8 +21,8 @@ def sum_two_values_and_add_value(first_value, second_value, f_sum):
     return f_sum(first_value + second_value)
 
 
-print(sum_two_values_and_add_value(5, 2, sum_one))
-print(sum_two_values_and_add_value(5, 2, sum_five))
+print(f"Funcion sum_two_values_and_add_value sum_one {sum_two_values_and_add_value(5, 2, sum_one)}")
+print(f"Funcion sum_two_values_and_add_value sum_five {sum_two_values_and_add_value(5, 2, sum_five)}")
 
 ### Closures ###
 
@@ -37,8 +37,9 @@ def sum_ten(original_value):
 
 add_closure = sum_ten(1)
 print(add_closure(5))
-print((sum_ten(5))(1))
-
+print((sum_ten(6))(1))
+print(f"Arriba se muestra el resultado de la suma de 5 + 10 + 1")
+print(f"Abajo se muestra el resultado de la suma de 6 + 10 + 1")
 ### Built-in Higher Order Functions ###
 # Python tiene funciones de orden superior muy útiles ya integradas
 
@@ -51,8 +52,8 @@ def multiply_two(number):
     return number * 2
 
 
-print(list(map(multiply_two, numbers)))
-print(list(map(lambda number: number * 2, numbers)))
+print(f"Funcion map larga {list(map(multiply_two, numbers))}")
+print(f"Funcion map lambda {list(map(lambda number: number * 2, numbers))}")
 
 # Filter
 # Filtra los elementos de una lista basándose en si una función devuelve True
@@ -63,8 +64,12 @@ def filter_greater_than_ten(number):
     return False
 
 
-print(list(filter(filter_greater_than_ten, numbers)))
-print(list(filter(lambda number: number > 10, numbers)))
+def filter_greater_than_ten_2(number):
+    return number > 10
+
+print(f"Funcion filter larga {list(filter(filter_greater_than_ten, numbers))}")
+print(f"Funcion filter corta {list(filter(filter_greater_than_ten_2, numbers))}")
+print(f"Funcion filter lambda {list(filter(lambda number: number > 10, numbers))}")
 
 # Reduce
 # Aplica una función de forma acumulativa a los elementos de una lista, reduciéndola a un solo valor.
@@ -73,5 +78,6 @@ def sum_two_values(first_value, second_value):
     return first_value + second_value
 
 
-print(reduce(sum_two_values, numbers))
+print(f"Aqui pracicamos con reduce {reduce(sum_two_values, numbers)}")
+print(f"Aqui pracicamos con reduce y lambda {reduce(lambda first_value, second_value: first_value + second_value, numbers)}")
 

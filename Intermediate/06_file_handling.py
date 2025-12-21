@@ -12,7 +12,7 @@ print("\nEmpezamos con los archivos\n")
 # 'open' abre el archivo.
 # "w+" es el modo: escritura (write) + lectura (read).
 # Si el archivo no existe lo crea, si existe lo sobrescribe.
-txt_file = open("my_file.txt", "w+")
+txt_file = open("Intermediate/my_file.txt", "w+")
 
 txt_file.write(
     "Mi nombre es Brais\nMi apellido es Moure\n35 años\nY mi lenguaje preferido es Python")
@@ -51,7 +51,7 @@ txt_file.close()
 # 'with open' es la forma recomendada de trabajar con archivos.
 # Se encarga de abrir y cerrar el archivo automáticamente, incluso si hay errores.
 # Agrega una nueva línea en el fichero
-with open("my_file.txt", "a") as my_other_file:
+with open("Intermediate/my_file.txt", "a") as my_other_file:
     my_other_file.write("\nY Swift")
 
 # os.remove("Intermediate/my_file.txt")
