@@ -15,8 +15,8 @@ def procesar_csv(archivo_entrada, archivo_salida):
                 nueva_linea = f'("{contenido}"'
                 
                 # Lógica para cada 1000 líneas
-                if i % 2 == 0:
-                    f_out.write(nueva_linea + ");\n\nINSERT\n")
+                if i % 20 == 0:
+                    f_out.write(nueva_linea + ");\n\nINSERT INTO tabla (columna)\nVALUES\n")
                 else:
                     f_out.write(nueva_linea + "),\n")
                     
